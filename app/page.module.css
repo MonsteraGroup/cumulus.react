@@ -1,0 +1,790 @@
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+
+  background-color: #00443B;
+  color: #dec2d9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  font-family: 'Neue Haas Grotesk Display Std';
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --gray-rgb: 255, 255, 255;
+    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.year {
+  font-size: 20px !important;
+  line-height: 22px !important;
+  color: #dec2d9;
+}
+
+.navigation {
+  display: flex;
+  gap: 40px;
+}
+
+.navigation a {
+  color: #dec2d9;
+  text-decoration: none;
+  font-size: 20px !important;
+  line-height: 22px !important;
+}
+
+.clientPortal {
+  margin-left: 20px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-grow: 1;
+  margin-top: 40px;
+}
+
+.mainMobile {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.logoContainerMobile {
+  flex-direction: column;
+}
+
+.logoContainerTablet {
+  flex-direction: column;
+}
+
+.logo {
+  color: #FFFFFF; /* Make sure logo is white */
+  filter: none; /* Ensure no filters are applied */
+}
+
+.companyName {
+  font-size: 7rem;
+  font-weight: 400;
+  color: #DBC3DB;
+  line-height: 1;
+  font-family: 'OATMEAL Pro TRIAL';
+  margin-top: 0;
+  letter-spacing: -0.05em;
+}
+
+.companyNameMobile {
+  font-size: 4rem;
+  margin-top: 0.5rem;
+}
+
+.companyNameTablet {
+  font-size: 5.5rem;
+  margin-top: 0.25rem;
+}
+
+.tagline {
+  text-align: right;
+}
+
+.tagline h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: normal;
+  margin: 0;
+}
+
+.taglineContent {
+  color: #dec2d9;
+  text-align: left;
+  margin-top: 3rem;
+  max-width: 100%;
+}
+
+.taglineMobile {
+  width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.taglineMobile .taglineContent {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.taglineTablet {
+  text-align: right;
+}
+
+.taglineText {
+  font-weight: 400;
+  line-height: 1.1;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+}
+
+.taglineText1 {
+  margin-bottom: 0.5rem;
+  margin-left: 6rem;
+}
+
+.taglineText2 {
+  margin-bottom: 0.5rem;
+  margin-left: 3rem;
+}
+
+.taglineText3 {
+  margin-left: 0;
+}
+
+.taglineMobile .taglineText1 {
+  margin-left: 3rem;
+  font-size: clamp(2rem, 7vw, 4rem);
+}
+
+.taglineMobile .taglineText2 {
+  margin-left: 1.5rem;
+  font-size: clamp(2rem, 7vw, 4rem);
+}
+
+.taglineMobile .taglineText3 {
+  font-size: clamp(2rem, 7vw, 4rem);
+}
+
+.taglineTablet .taglineText1 {
+  margin-left: 4.5rem;
+  font-size: clamp(2.2rem, 7.5vw, 4.5rem);
+}
+
+.taglineTablet .taglineText2 {
+  margin-left: 2.2rem;
+  font-size: clamp(2.2rem, 7.5vw, 4.5rem);
+}
+
+.taglineTablet .taglineText3 {
+  font-size: clamp(2.2rem, 7.5vw, 4.5rem);
+}
+
+.mobileYear {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #dec2d9;
+}
+
+.tabletYear {
+  bottom: 3rem;
+  font-size: 1.8rem;
+}
+
+.main ol {
+  font-family: 'Neue Haas Grotesk Display Std';
+  padding-left: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  list-style-position: inside;
+}
+
+.main li:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+
+.main code {
+  font-family: 'Neue Haas Grotesk Display Std';
+  background: var(--gray-alpha-100);
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.ctas {
+  display: flex;
+  gap: 16px;
+}
+
+.ctas a {
+  appearance: none;
+  border-radius: 128px;
+  height: 48px;
+  padding: 0 20px;
+  border: none;
+  border: 1px solid transparent;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+a.primary {
+  background: var(--foreground);
+  color: var(--background);
+  gap: 8px;
+}
+
+a.secondary {
+  border-color: var(--gray-alpha-200);
+  min-width: 180px;
+}
+
+.footer {
+  grid-row-start: 3;
+  display: flex;
+  gap: 24px;
+}
+
+.footer a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer img {
+  flex-shrink: 0;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  a.primary:hover {
+    background: var(--button-primary-hover);
+    border-color: transparent;
+  }
+
+  a.secondary:hover {
+    background: var(--button-secondary-hover);
+    border-color: transparent;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 32px;
+    padding-bottom: 80px;
+  }
+
+  .main {
+    align-items: center;
+  }
+
+  .main ol {
+    text-align: center;
+  }
+
+  .ctas {
+    flex-direction: column;
+  }
+
+  .ctas a {
+    font-size: 14px;
+    height: 40px;
+    padding: 0 16px;
+  }
+
+  a.secondary {
+    min-width: auto;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Remove the invert filter */
+  .logo {
+    /* filter: invert(); */ /* This was inverting your white SVG to black */
+  }
+}
+
+/* Fix backdrop shadow issue with completely new approach */
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  filter: none;
+  -webkit-filter: none;
+  pointer-events: all;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  opacity: 1;
+}
+
+.backdropOpen {
+  animation: expandBackdrop 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes expandBackdrop {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+/* Matching animation approach for modal */
+.contactModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw; 
+  height: 100vh;
+  background-color: #5278B8;
+  z-index: 1000;
+  display: flex;
+  padding: 2rem;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.modalOpen {
+  transform: scaleY(1) !important;
+  transition: transform 2s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.closeText {
+  color: #dec2d9;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.closeIcon {
+  color: #dec2d9;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.contactContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  padding: 3rem 3rem 6rem;
+  margin-top: 4rem !important;
+}
+
+.contactContentMobile {
+  padding: 2rem 1rem 4rem;
+}
+
+.contactContentTablet {
+  padding: 2.5rem 2rem 5rem;
+}
+
+.contactInfo {
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  font-weight: 300;
+  color: #dec2d9;
+  line-height: 1.1;
+  max-width: 70%;
+}
+
+.contactInfoMobile {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  max-width: 65%;
+}
+
+.contactInfoTablet {
+  font-size: clamp(3rem, 7vw, 5rem);
+}
+
+.emailInfo {
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+}
+
+.emailInfoMobile {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+}
+
+.emailInfoTablet {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.modalLogoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.modalCompanyName {
+  color: #DBC3DB;
+  font-size: 3.691rem;
+  margin-top: 0.5rem;
+  font-weight: 400;
+  line-height: 70.86px;
+}
+
+.modalCompanyNameMobile {
+  font-size: 1.5rem;
+}
+
+.modalCompanyNameTablet {
+  font-size: 1.8rem;
+}
+
+/* Add specific xs overrides */
+@media (max-width: 480px) {
+  .page {
+    padding: 15px 25px;
+  }
+  
+  .main {
+    margin-top: 25px;
+  }
+  
+  .mainMobile {
+    margin-top: 20px;
+  }
+  
+  .logoContainerMobile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .companyNameMobile {
+    font-size: 3.2rem;
+    margin-top: 0.3rem;
+    text-align: center;
+  }
+  
+  .taglineMobile {
+    margin-top: 1.5rem;
+  }
+  
+  .taglineMobile .taglineContent {
+    margin-top: 0;
+  }
+  
+  .taglineMobile .taglineText {
+    text-align: center;
+  }
+  
+  .taglineMobile .taglineText1 {
+    margin-left: 0;
+    font-size: clamp(1.8rem, 6vw, 3rem);
+  }
+  
+  .taglineMobile .taglineText2 {
+    margin-left: 0;
+    font-size: clamp(1.8rem, 6vw, 3rem);
+  }
+  
+  .taglineMobile .taglineText3 {
+    margin-left: 0;
+    font-size: clamp(1.8rem, 6vw, 3rem);
+  }
+  
+  .contactContentMobile {
+    padding: 1.5rem 0.8rem 3.5rem;
+  }
+  
+  .contactInfoMobile {
+    font-size: clamp(2.2rem, 7vw, 4rem);
+    max-width: 60%;
+  }
+  
+  .emailInfoMobile {
+    font-size: clamp(1.7rem, 5vw, 3rem);
+  }
+  
+  .modalCompanyNameMobile {
+    font-size: 1.2rem;
+  }
+  
+  .mobileYear {
+    bottom: 1.5rem;
+    font-size: 1.3rem;
+  }
+  
+  .closeButton {
+    top: 1.2rem;
+    right: 1.5rem;
+  }
+  
+  .closeText {
+    font-size: 0.9rem;
+  }
+  
+  .closeIcon {
+    font-size: 1.5rem;
+  }
+}
+
+/* Add styles for small mobile but not xs */
+@media (min-width: 481px) and (max-width: 767px) {
+  .mainMobile {
+    margin-top: 30px;
+  }
+  
+  .taglineMobile {
+    margin-top: 2rem;
+  }
+  
+  .taglineMobile .taglineText {
+    text-align: center;
+  }
+  
+  .taglineMobile .taglineText1 {
+    margin-left: 0;
+  }
+  
+  .taglineMobile .taglineText2 {
+    margin-left: 0;
+  }
+  
+  .taglineMobile .taglineText3 {
+    margin-left: 0;
+  }
+}
+
+.modalBackdropMobile {
+  z-index: 1000;
+  /* Ensure backdrop properly covers entire screen on mobile */
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.contactModalMobile {
+  z-index: 1001;
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactContentMobile {
+  flex-direction: column;
+  padding: 0 1rem 3rem !important;
+  margin-top: 4rem !important;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 85%;
+}
+
+.modalLogoContainer {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 4.3rem;
+  right: 1.5rem;
+}
+
+.contactInfoMobile {
+  font-size: 3rem !important;
+  max-width: 100% !important;
+  line-height: 1.1;
+  margin-top: 3rem;
+  margin-left: 1rem;
+}
+
+.emailInfoMobile {
+  font-size: 2rem !important;
+  display: inline-block;
+  margin-top: 0.5rem;
+  line-height: 1.1;
+}
+
+/* Adjust close button for better mobile positioning */
+.contactModalMobile .closeButton {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Adjust for extra small screens */
+@media (max-width: 480px) {
+  .contactModalMobile {
+    padding: 1rem 0.75rem;
+  }
+  
+  .contactContentMobile {
+    padding: 0 0.75rem 2rem !important;
+    margin-top: 3.5rem !important;
+  }
+  
+  .contactInfoMobile {
+    font-size: 2.5rem !important;
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+  }
+  
+  .emailInfoMobile {
+    font-size: 1.7rem !important;
+  }
+  
+  .modalLogoContainer {
+    bottom: 1.5rem;
+    right: 1rem;
+  }
+  
+  .contactModalMobile .modalCompanyName {
+    font-size: 1.3rem;
+    margin-top: 0.3rem;
+  }
+}
+
+/* Specific adjustments for small but not xs screens */
+@media (min-width: 481px) and (max-width: 767px) {
+  .contactInfoMobile {
+    margin-top: 2.5rem;
+  }
+  
+  .contactModalMobile .modalCompanyName {
+    font-size: 1.5rem;
+  }
+}
+
+.modalBackdropTablet {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+}
+
+.contactModalTablet {
+  position: fixed;
+  z-index: 1001;
+  /* Additional tablet-specific modal styling */
+}
+
+/* Fix logo container positioning on mobile */
+.contactModalMobile .modalLogoContainer {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+/* Ensure logo and text are properly aligned */
+.contactModalMobile .modalCompanyName {
+  font-size: 1.8rem;
+  margin-top: 0.3rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Adjust for extra small screens */
+@media (max-width: 480px) {
+  .contactModalMobile .modalLogoContainer {
+    bottom: 2rem;
+    right: 1rem;
+  }
+  
+  .contactModalMobile .modalCompanyName {
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+  }
+  
+  /* Adjust image size for better proportion on mobile */
+  .contactModalMobile .modalLogoContainer img {
+    width: 100px !important;
+    height: auto !important;
+  }
+}
+
+/* Specific adjustments for small but not xs screens */
+@media (min-width: 481px) and (max-width: 767px) {
+  .contactModalMobile .modalLogoContainer {
+    bottom: 2.2rem;
+    right: 1.2rem;
+  }
+  
+  .contactModalMobile .modalLogoContainer img {
+    width: 120px !important;
+    height: auto !important;
+  }
+}
